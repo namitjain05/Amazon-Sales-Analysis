@@ -23,7 +23,7 @@ This project aims to address the need for a comprehensive sales analysis dashboa
 - Step 4 : It was observed that in none of the columns errors & empty values were present.
 - Step 5 : Created a Date Table to support time intelligence functions useing DAX:
 
-           DateTable = CALENDAR(MIN(Sales[Order Date]), MAX(Sales[Order Date]))
+      DateTable = CALENDAR(MIN(Sales[Order Date]), MAX(Sales[Order Date]))
 - Step 6: Added five new columns using DAX for improved time-based analysis and visualization:
   
    1. Month Name – Extracts the abbreviated month name (e.g., Jan, Feb) to make the line chart more intuitive and user-friendly.
@@ -34,30 +34,38 @@ This project aims to address the need for a comprehensive sales analysis dashboa
 
  DAX:
 
-     Month Name = FORMAT('Date Table'[Date],"MMM")
-     Month Number = MONTH('Date Table'[Date])
-     Week = WEEKNUM('Date Table'[Date])
-     Quarter Number = QUARTER('Date Table'[Date])
-     Qtr = CONCATENATE("Qtr",'Date Table'[Quarter Number])
+       Month Name = FORMAT('Date Table'[Date],"MMM")
+       Month Number = MONTH('Date Table'[Date])
+       Week = WEEKNUM('Date Table'[Date])
+       Quarter Number = QUARTER('Date Table'[Date])
+       Qtr = CONCATENATE("Qtr",'Date Table'[Quarter Number])
 
 - Step 6 : In the report view, under the view tab, theme was selected.
 - Step 7 : Since the problem statement required KPI visuals
 
-   1. YTD Sales – $2.18M
-       - Displays total sales revenue generated year-to-date.
-       - Indicates overall business performance for the year.
+ 1. YTD Sales – $2.18M
+    - Displays total sales revenue generated year-to-date.
+    - Indicates overall business performance for the year.
 
-Snap of YTD Sales KPI ,
+To support this KPI, a DAX measure was created for YTD Sales, which calculates the cumulative number of products sold from the beginning of the year up to the selected date, enabling year-to-date performance tracking and trend analysis...... DAX:
 
-![Snap 1](https://github.com/user-attachments/assets/17d4c08c-a663-4584-9b5c-4eb17e1e92ae)
+       YTD Sales = TOTALYTD(SUM(Amazon_Data[Price(Dollar)]),'Date Table'[Date])
+       
+Snap of YTD Sales KPI.
+![Image](https://github.com/user-attachments/assets/4d499581-46ad-499b-95c0-b7119011646a)
 
-QTD Sales – $811.09K
+2. QTD Sales – $811.09K
+   - Shows total sales in the current quarter.
+   - Useful for understanding quarterly growth and performance.
 
-Shows total sales in the current quarter.
+To support this KPI, a DAX measure was created for QTD Sales, which calculates the cumulative sales revenue from the start of the current quarter up to the selected date, allowing for precise tracking of quarterly performance and sales trends...... DAX:
 
-Useful for understanding quarterly growth and performance.
+      QTD Sales = TOTALQTD(SUM(Amazon_Data[Price(Dollar)]),'Date Table'[Date])
+      
+Snap of QTD Sales KPI.
 
-YTD Products Sold – 27.75K
+
+YTD Products Sold – 27.75k
 
 Number of products sold year-to-date.
 
