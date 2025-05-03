@@ -1,6 +1,6 @@
 # Amazon Sales Analysis Dasboard
 
-### Dashboard Link : https://app.powerbi.com/groups/me/reports/b99903ec-454e-41d5-9d4e-429e571fb152/11356f0f2de0e00788dc?experience=power-bi
+### Dashboard Link : file:///C:/Users/Hp/Downloads/Sales%20Analysis%20Amazon%20Products.pdf
 
 ## Problem Statement
 Amazon, being one of the largest e-commerce platforms, generates a massive amount of sales data across various product categories. However, without a structured analysis, it becomes difficult for business stakeholders to monitor performance, identify growth opportunities, and understand customer preferences.
