@@ -1,31 +1,19 @@
-# Airlines-Dashboard
+# Amazon Sales Analysis Dasboard
 
 ### Dashboard Link : https://app.powerbi.com/groups/me/reports/384d017e-e935-44dc-9e7d-1626c1a36de1/ReportSection
 
 ## Problem Statement
 Amazon, being one of the largest e-commerce platforms, generates a massive amount of sales data across various product categories. However, without a structured analysis, it becomes difficult for business stakeholders to monitor performance, identify growth opportunities, and understand customer preferences.
-This project aims to address the need for a comprehensive sales analysis dashboard that provides actionable insights using Power BI. The focus is on:
-Tracking Year-To-Date (YTD) and Quarter-To-Date (QTD) sales trends.
 
+This project aims to address the need for a comprehensive sales analysis dashboard that provides actionable insights using Power BI. The focus is on:
+
+Tracking Year-To-Date (YTD) and Quarter-To-Date (QTD) sales trends.
 
 Monitoring the volume of products sold and customer reviews to gauge satisfaction.
 
-
 Visualizing performance metrics across time periods and product categories.
 
-
 Identifying the top-performing products by both sales and reviews.
-
-
-By fulfilling these requirements, the dashboard empowers decision-makers to:
-Understand seasonality and weekly performance fluctuations.
-
-
-Assess which products are driving the most revenue and customer engagement.
-
-
-Make data-driven decisions for inventory planning, marketing, and product strategy.
-
 
 ### Steps followed 
 
