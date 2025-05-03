@@ -1,6 +1,8 @@
 # Amazon-Sales-Analysis
 # Amazon Product Sales Analysis Dashboard 📊
 
+Dashboard Link: https://1drv.ms/u/c/fad6d95bd61ffa0f/EXnL2mhWWOFGk4nWjLZ9_NwB5SP7jjHzkTw-3CxdjdqUlw?e=JKqyp2
+
 This Power BI project provides a detailed sales performance analysis of Amazon products. It focuses on key metrics such as sales trends, product reviews, and top-performing categories to support strategic decision-making in sales and marketing.
 
 ## 🔍 Objective
