@@ -52,6 +52,7 @@ To support this KPI, a DAX measure was created for YTD Sales, which calculates t
        YTD Sales = TOTALYTD(SUM(Amazon_Data[Price(Dollar)]),'Date Table'[Date])
        
 Snap of YTD Sales KPI.
+
 ![Image](https://github.com/user-attachments/assets/4d499581-46ad-499b-95c0-b7119011646a)
 
 2. QTD Sales – $811.09K
@@ -64,13 +65,17 @@ To support this KPI, a DAX measure was created for QTD Sales, which calculates t
       
 Snap of QTD Sales KPI.
 
+![Image](https://github.com/user-attachments/assets/6f25f309-7963-4c66-b0a3-2f446f7e1229)
 
-YTD Products Sold – 27.75k
+3. YTD Products Sold – 27.75k
+   - Number of products sold year-to-date.
+   - Tracks volume of sales and product movement.
+  
+To support this KPI, a DAX measure was created for YTD Products Sold, which calculates the cumulative number of products sold from the beginning of the year up to the selected date, enabling year-to-date performance tracking and trend analysis.....DAX:
 
-Number of products sold year-to-date.
+      YTD Products Sold = TOTALYTD(COUNT(Amazon_Data[Product Category]),'Date Table'[Date])
 
-Tracks volume of sales and product movement.
-
+Snap of YTD Products Sold KPI.
 YTD Reviews – 19.42M
 
 Represents the number of product reviews received year-to-date.
