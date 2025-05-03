@@ -40,8 +40,8 @@ This project aims to address the need for a comprehensive sales analysis dashboa
        Quarter Number = QUARTER('Date Table'[Date])
        Qtr = CONCATENATE("Qtr",'Date Table'[Quarter Number])
 
-- Step 6 : In the report view, under the view tab, theme was selected.
-- Step 7 : Since the problem statement required KPI visuals
+- Step 7 : In the report view, under the view tab, theme was selected.
+- Step 8 : As per the problem statement, KPI visuals like YTD Sales, QTD Sales, YTD Products Sold, and YTD Reviews were created using DAX to provide quick insights into performance and customer engagement.
 
  1. YTD Sales – $2.18M
     - Displays total sales revenue generated year-to-date.
@@ -90,18 +90,87 @@ To support this KPI, a DAX measure was created for YTD Reviews, which calculates
 Snap of YTD Reviews KPI.
 
 ![Image](https://github.com/user-attachments/assets/36f6555b-d5f1-4c5d-89a9-ebeb1ff31c51)
-   
 
+- Step 9: Created a line chart to visualize monthly sales trends, enabling pattern analysis and data-driven decisions by identifying high and low-performing months. The chart reveals that in the U.S., Amazon recorded its highest sales during the festive season, highlighting the significant impact of holidays on consumer purchasing behavior.
 
+Snap of Sales By Month (Line Chart)
+
+![Image](https://github.com/user-attachments/assets/71f9c7eb-634a-4ffe-801f-e7853020114c)
   
+- Step 10: Developed a bar chart to display weekly sales distribution, allowing for granular analysis of sales performance and the identification of peak and low-activity weeks.
 
+Snap of Sales By Week (Stacked Bar Chart)
+
+![Image](https://github.com/user-attachments/assets/53f2ba48-cfbb-46ff-8457-412270dba71b)
+
+- Step 11: Designed a table to showcase sales by product category, enabling a clear comparison of revenue contribution across categories for both YTD and QTD. Applied gradient formatting to visually highlight performance differences, making it easier to identify top and underperforming categories at a glance.
+
+Snap of Sales By Product Category (Matrix)
+
+![Image](https://github.com/user-attachments/assets/9c31e45f-f1c8-4dc4-b986-3e56c415c309)
+
+- Step 12: Created a bar chart highlighting the top 5 products by YTD sales, helping stakeholders quickly identify best-selling items and focus marketing or inventory efforts.
         
+Snap of Top 5 Products by YTD Sales (Bar Chart)    
 
-        
-      
- 
+![Image](https://github.com/user-attachments/assets/88dc6b24-057a-433c-9de6-8548c6992681)
 
- 
+- Step 13: Built a bar chart showing the top 5 products by YTD reviews, offering insights into customer engagement and the popularity of individual products.
+
+Snap of Top 5 Review by YTD Review (Bar Chart) 
+
+![image](https://github.com/user-attachments/assets/7c2a770e-6ce8-4794-bf04-ac384bc3d261)
+
+- Step 14: Added slicers for product category and quarter to enhance interactivity, allowing users to filter and analyze the dashboard dynamically based on their focus area.
+
+# Snapshot of Dashboard (Power BI Service)
+
+![image](https://github.com/user-attachments/assets/3617a075-3905-4c29-b62c-2442640924c2)
+
+ # Insights
+
+A single page report was created on Power BI Desktop & it was then published to Power BI Service.
+
+Following inferences can be drawn from the dashboard:
+
+📈 Key Metrics
+
+- YTD Sales: $2.18M
+
+- QTD Sales: $811.09K
+
+- Products Sold: 27.75K
+
+- YTD Reviews: 19.42M
+
+📅 Sales Trends
+
+- Best Month: December
+
+- Worst Month: February
+
+- Sales rise significantly during the festive season (Q4).
+
+- Weekly sales spike between weeks 39–52.
+
+🛍️ Category Performance
+
+- Top Category: Camera ($4.92M, 22.62%)
+
+- Lowest: Toys ($110.8K, 5.09%)
+
+- Gradient formatting used for visual clarity.
+
+🔝 Top Products
+
+- By Sales: Nikon Wi... ($34K)
+
+- By Reviews: SanDisk 1... (0.40M)
+
+- Electronics lead in both revenue and engagement.
+
+
+
 
     
 
