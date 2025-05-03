@@ -21,12 +21,53 @@ This project aims to address the need for a comprehensive sales analysis dashboa
 - Step 2 : Open power query editor & in view tab under Data preview section, check "column distribution", "column quality" & "column profile" options.
 - Step 3 : Also since by default, profile will be opened only for 1000 rows so you need to select "column profiling based on the entire dataset".
 - Step 4 : It was observed that in none of the columns errors & empty values were present.
-- Step 5 :  Created a Date Table to support time intelligence functions useing DAX:
+- Step 5 : Created a Date Table to support time intelligence functions useing DAX:
 
            DateTable = CALENDAR(MIN(Sales[Order Date]), MAX(Sales[Order Date]))
+- Step 6: Added five new columns using DAX for improved time-based analysis and visualization:
+  
+   1. Month Name – Extracts the abbreviated month name (e.g., Jan, Feb) to make the line chart more intuitive and user-friendly.
+   2. Month Number – Captures the numerical value of the month (1–12), used to correctly sort the month names chronologically.
+   3. Week – Represents the week number of the year to enable week-wise sales analysis.
+   4. Quarter – Identifies the quarter (Q1–Q4) to support quarter-level sales insights.
+   5. QTR – Provides a simplified label (e.g., Q1, Q2) for use in slicers, enhancing visual clarity and interactivity.
+
+ DAX:
+
+     Month Name = FORMAT('Date Table'[Date],"MMM")
+     Month Number = MONTH('Date Table'[Date])
+     Week = WEEKNUM('Date Table'[Date])
+     Quarter Number = QUARTER('Date Table'[Date])
+     Qtr = CONCATENATE("Qtr",'Date Table'[Quarter Number])
 
 - Step 6 : In the report view, under the view tab, theme was selected.
-- Step 7 : Since the data contains various ratings, thus in order to represent ratings, a new visual was added using the three ellipses in the visualizations pane in report view. 
+- Step 7 : Since the problem statement required KPI visuals
+
+   1. YTD Sales – $2.18M
+       - Displays total sales revenue generated year-to-date.
+       - Indicates overall business performance for the year.
+
+Snap of YTD Sales KPI ,
+
+![Snap 1](https://github.com/user-attachments/assets/17d4c08c-a663-4584-9b5c-4eb17e1e92ae)
+
+QTD Sales – $811.09K
+
+Shows total sales in the current quarter.
+
+Useful for understanding quarterly growth and performance.
+
+YTD Products Sold – 27.75K
+
+Number of products sold year-to-date.
+
+Tracks volume of sales and product movement.
+
+YTD Reviews – 19.42M
+
+Represents the number of product reviews received year-to-date.
+
+Helps assess customer feedback and satisfaction trends.
 - Step 8 : Visual filters (Slicers) were added for four fields named "Class", "Customer Type", "Gate Location" & "Type of travel".
 - Step 9 : Two card visuals were added to the canvas, one representing average departure delay in minutes & other representing average arrival delay in minutes.
            Using visual level filter from the filters pane, basic filtering was used & null values were unselected for consideration into average calculation.
@@ -83,7 +124,7 @@ for creating new column following DAX expression was written;
         
 Snap of new calculated column ,
 
-![Snap_1](https://user-images.githubusercontent.com/102996550/174089602-ab834a6b-62ce-4b62-8922-a1d241ec240e.jpg)
+![Snap 1](https://github.com/user-attachments/assets/17d4c08c-a663-4584-9b5c-4eb17e1e92ae)
 
         
 - Step 15 : New measure was created to find total count of customers.
